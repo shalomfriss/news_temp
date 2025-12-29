@@ -35,6 +35,8 @@
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		250E081565A9FBCD52E1EA40 /* Pods-Runner.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-production.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-production.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		442F38952F02C17F006AADCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		442F38962F02C1A0006AADCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6728B3F3347A014A8C5A7819 /* Pods-Runner.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-development.xcconfig"; sourceTree = "<group>"; };
 		6D0CD921331D0DB5A0930E54 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D8B3A37006E6B5D071430D /* Pods-Runner.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-development.xcconfig"; sourceTree = "<group>"; };
 		DC8E0F0C255E1FA4003B4A52 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
-		DC98A66424D9DA07006931FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		442F38932F02BF82006AADCA /* production */ = {
+			isa = PBXGroup;
+			children = (
+				442F38962F02C1A0006AADCA /* GoogleService-Info.plist */,
+			);
+			path = production;
+			sourceTree = "<group>";
+		};
 		734050CFD58A2075000AE998 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8E0F0C255E1FA4003B4A52 /* Runner.entitlements */,
+				442F38932F02BF82006AADCA /* production */,
 				DC98A66324D9DA07006931FA /* development */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
@@ -145,7 +155,7 @@
 		DC98A66324D9DA07006931FA /* development */ = {
 			isa = PBXGroup;
 			children = (
-				DC98A66424D9DA07006931FA /* GoogleService-Info.plist */,
+				442F38952F02C17F006AADCA /* GoogleService-Info.plist */,
 			);
 			path = development;
 			sourceTree = "<group>";
@@ -495,7 +505,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 42QKVF5N7J;
+				DEVELOPMENT_TEAM = 8NN27Z7TQR;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
 				FACEBOOK_APP_ID = "";
@@ -518,7 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REVERSED_CLIENT_ID = "<PASTE-REVERSED-CLIENT-ID-HERE>";
+				REVERSED_CLIENT_ID = "com.googleusercontent.apps.601130087328-5dig8mf1pqt4mv0e14hb014leijunio3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TWITTER_REDIRECT_URI_SCHEME = "news-temp";
@@ -535,7 +545,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 42QKVF5N7J;
+				DEVELOPMENT_TEAM = 8NN27Z7TQR;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
 				FACEBOOK_APP_ID = "";
@@ -558,7 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REVERSED_CLIENT_ID = "<PASTE-REVERSED-CLIENT-ID-HERE>";
+				REVERSED_CLIENT_ID = "com.googleusercontent.apps.418401997864-2f2utt8sk74eu43pk59mg7fu21p2p1hf";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -633,7 +643,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 42QKVF5N7J;
+				DEVELOPMENT_TEAM = 8NN27Z7TQR;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
 				FACEBOOK_APP_ID = "";
@@ -656,7 +666,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REVERSED_CLIENT_ID = "<PASTE-REVERSED-CLIENT-ID-HERE>";
+				REVERSED_CLIENT_ID = "com.googleusercontent.apps.418401997864-2f2utt8sk74eu43pk59mg7fu21p2p1hf";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TWITTER_REDIRECT_URI_SCHEME = "news-temp";
@@ -730,7 +740,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 42QKVF5N7J;
+				DEVELOPMENT_TEAM = 8NN27Z7TQR;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
 				FACEBOOK_APP_ID = "";
@@ -753,7 +763,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REVERSED_CLIENT_ID = "<PASTE-REVERSED-CLIENT-ID-HERE>";
+				REVERSED_CLIENT_ID = "com.googleusercontent.apps.601130087328-5dig8mf1pqt4mv0e14hb014leijunio3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
