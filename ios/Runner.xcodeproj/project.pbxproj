@@ -526,7 +526,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda.;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REVERSED_CLIENT_ID = "com.googleusercontent.apps.601130087328-5dig8mf1pqt4mv0e14hb014leijunio3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -761,7 +761,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda.;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shalomfriss.ganda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REVERSED_CLIENT_ID = "com.googleusercontent.apps.601130087328-5dig8mf1pqt4mv0e14hb014leijunio3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
