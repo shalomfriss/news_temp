@@ -4,12 +4,13 @@ import 'package:deep_link_client/deep_link_client.dart';
 import 'package:firebase_authentication_client/firebase_authentication_client.dart';
 import 'package:firebase_deep_link_client/firebase_deep_link_client.dart';
 import 'package:firebase_notifications_client/firebase_notifications_client.dart';
+import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
+import 'package:news_repository/news_repository.dart';
 import 'package:news_temp/app/app.dart';
 import 'package:news_temp/main/bootstrap/bootstrap.dart';
 import 'package:news_temp/src/version.dart';
 import 'package:news_temp_api/client.dart';
-import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
-import 'package:news_repository/news_repository.dart';
+import 'package:news_temp_api/src/client/news_remote_api_client.dart';
 import 'package:notifications_repository/notifications_repository.dart';
 import 'package:package_info_client/package_info_client.dart';
 import 'package:permission_client/permission_client.dart';
@@ -28,7 +29,12 @@ void main() {
     ) async {
       final tokenStorage = InMemoryTokenStorage();
 
-      final apiClient = NewsTempApiClient.localhost(
+      // final apiClient = NewsTempApiClient.localhost(
+      //   tokenProvider: tokenStorage.readToken,
+      // );
+
+      final apiClient = NewsRemoteApiClient(
+        baseUrl: 'https://api.example.com',
         tokenProvider: tokenStorage.readToken,
       );
 

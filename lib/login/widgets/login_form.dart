@@ -65,8 +65,8 @@ class _LoginContent extends StatelessWidget {
                 _AppleLoginButton(),
               ],
               const SizedBox(height: AppSpacing.lg),
-              _FacebookLoginButton(),
-              const SizedBox(height: AppSpacing.lg),
+              // _FacebookLoginButton(),
+              // const SizedBox(height: AppSpacing.lg),
               _TwitterLoginButton(),
               const SizedBox(height: AppSpacing.lg),
               _ContinueWithEmailLoginButton(),
@@ -160,23 +160,23 @@ class _GoogleLoginButton extends StatelessWidget {
   }
 }
 
-class _FacebookLoginButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return AppButton.blueDress(
-      key: const Key('loginForm_facebookLogin_appButton'),
-      onPressed: () => context.read<LoginBloc>().add(LoginFacebookSubmitted()),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Assets.icons.facebook.svg(),
-          const SizedBox(width: AppSpacing.lg),
-          Assets.images.continueWithFacebook.svg(),
-        ],
-      ),
-    );
-  }
-}
+// class _FacebookLoginButton extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return AppButton.blueDress(
+//       key: const Key('loginForm_facebookLogin_appButton'),
+//       onPressed: () => context.read<LoginBloc>().add(LoginFacebookSubmitted()),
+//       child: Row(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Assets.icons.facebook.svg(),
+//           const SizedBox(width: AppSpacing.lg),
+//           Assets.images.continueWithFacebook.svg(),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 class _TwitterLoginButton extends StatelessWidget {
   @override

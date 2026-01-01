@@ -28,8 +28,13 @@ void main() {
     ) async {
       final tokenStorage = InMemoryTokenStorage();
 
-      final apiClient = NewsTempApiClient.localhost(
+      // final apiClient = NewsTempApiClient.localhost(
+      //   tokenProvider: tokenStorage.readToken,
+      // );
+
+      final apiClient = YourNewsApiClient(
         tokenProvider: tokenStorage.readToken,
+        baseURL: 'https://newsservice-601130087328.us-central1.run.app/',
       );
 
       const permissionClient = PermissionClient();
