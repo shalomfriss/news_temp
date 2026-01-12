@@ -38,12 +38,12 @@ typedef TokenProvider = Future<String?> Function();
 /// {@template news_temp_api_client}
 /// A Dart API client for the News Temp API.
 /// {@endtemplate}
-class NewsTempApiClient {
+class NewsTempApiClient2 {
   /// Create an instance of [NewsTempApiClient] that integrates
   /// with the remote API.
   ///
   /// {@macro news_temp_api_client}
-  NewsTempApiClient({
+  NewsTempApiClient2({
     required TokenProvider tokenProvider,
     http.Client? httpClient,
   }) : this._(
@@ -56,7 +56,7 @@ class NewsTempApiClient {
   /// with a local instance of the API (http://localhost:8080).
   ///
   /// {@macro news_temp_api_client}
-  NewsTempApiClient.localhost({
+  NewsTempApiClient2.localhost({
     required TokenProvider tokenProvider,
     http.Client? httpClient,
   }) : this._(
@@ -65,7 +65,7 @@ class NewsTempApiClient {
           tokenProvider: tokenProvider,
         );
 
-  NewsTempApiClient.baseurl({
+  NewsTempApiClient2.baseurl({
     required TokenProvider tokenProvider,
     required String baseUrl,
     http.Client? httpClient,
@@ -76,7 +76,7 @@ class NewsTempApiClient {
         );
 
   /// {@macro news_temp_api_client}
-  NewsTempApiClient._({
+  NewsTempApiClient2._({
     required String baseUrl,
     required TokenProvider tokenProvider,
     http.Client? httpClient,

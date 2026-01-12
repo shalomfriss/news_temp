@@ -10,7 +10,6 @@ import 'package:news_temp/app/app.dart';
 import 'package:news_temp/main/bootstrap/bootstrap.dart';
 import 'package:news_temp/src/version.dart';
 import 'package:news_temp_api/client.dart';
-import 'package:news_temp_api/src/client/news_remote_api_client.dart';
 import 'package:notifications_repository/notifications_repository.dart';
 import 'package:package_info_client/package_info_client.dart';
 import 'package:permission_client/permission_client.dart';
@@ -29,14 +28,22 @@ void main() {
     ) async {
       final tokenStorage = InMemoryTokenStorage();
 
-      // final apiClient = NewsTempApiClient.localhost(
+      // Basic localhost
+      final apiClient = NewsTempApiClient.localhost(
+        tokenProvider: tokenStorage.readToken,
+      );
+
+      // Firebase with same data model
+      // final apiClient = NewsTempApiClient.baseurl(
+      //   baseUrl: 'https://newsservice-ghafjng6cq-uc.a.run.app',
       //   tokenProvider: tokenStorage.readToken,
       // );
 
-      final apiClient = NewsRemoteApiClient(
-        baseUrl: 'https://api.example.com',
-        tokenProvider: tokenStorage.readToken,
-      );
+      // final apiClient = NewsRemoteApiClient(
+      //   // baseUrl: 'https://newsservice-601130087328.us-central1.run.app',
+      //   baseUrl: 'https://newsservice-ghafjng6cq-uc.a.run.app',
+      //   tokenProvider: tokenStorage.readToken,
+      // );
 
       const permissionClient = PermissionClient();
 

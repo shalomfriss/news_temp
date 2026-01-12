@@ -1,0 +1,251 @@
+{
+  "categories": {
+    "top": { "name": "top" },
+    "business": { "name": "business" },
+    "entertainment": { "name": "entertainment" },
+    "health": { "name": "health" },
+    "science": { "name": "science" },
+    "sports": { "name": "sports" },
+    "technology": { "name": "technology" }
+  },
+  "feed": {
+    "top": {
+      "totalCount": 2,
+      "blocks": [
+        {
+          "type": "__section_header__",
+          "title": "Top Stories",
+          "action": {
+            "type": "__navigate_to_feed_category__",
+            "category": "top"
+          }
+        },
+        {
+          "type": "__post_large__",
+          "id": "art_tech_001",
+          "category": "technology",
+          "author": "Jane Doe",
+          "published_at": "2024-06-01T10:00:00Z",
+          "image_url": "https://example.com/img/ai.jpg",
+          "title": "AI chips are back",
+          "description": "Chip supply rebounds as demand surges.",
+          "is_premium": false,
+          "is_content_overlaid": false,
+          "action": {
+            "type": "__navigate_to_article__",
+            "article_id": "art_tech_001"
+          }
+        }
+      ]
+    },
+    "technology": {
+      "totalCount": 2,
+      "blocks": [
+        {
+          "type": "__section_header__",
+          "title": "Technology",
+          "action": {
+            "type": "__navigate_to_feed_category__",
+            "category": "technology"
+          }
+        },
+        {
+          "type": "__post_small__",
+          "id": "art_tech_002",
+          "category": "technology",
+          "author": "Sam Lee",
+          "published_at": "2024-06-02T09:30:00Z",
+          "image_url": "https://example.com/img/robot.jpg",
+          "title": "Warehouse robots get smarter",
+          "description": "New vision systems improve safety.",
+          "is_premium": true,
+          "action": {
+            "type": "__navigate_to_article__",
+            "article_id": "art_tech_002"
+          }
+        }
+      ]
+    }
+  },
+  "articles": {
+    "art_tech_001": {
+      "title": "AI chips are back",
+      "url": "https://example.com/articles/ai-chips",
+      "isPremium": false,
+      "totalCount": 3,
+      "post": {
+        "type": "__post_large__",
+        "id": "art_tech_001",
+        "category": "technology",
+        "author": "Jane Doe",
+        "published_at": "2024-06-01T10:00:00Z",
+        "image_url": "https://example.com/img/ai.jpg",
+        "title": "AI chips are back",
+        "description": "Chip supply rebounds as demand surges.",
+        "is_premium": false,
+        "is_content_overlaid": false,
+        "action": {
+          "type": "__navigate_to_article__",
+          "article_id": "art_tech_001"
+        }
+      },
+      "content": [
+        {
+          "type": "__article_introduction__",
+          "category": "technology",
+          "author": "Jane Doe",
+          "published_at": "2024-06-01T10:00:00Z",
+          "image_url": "https://example.com/img/ai.jpg",
+          "title": "AI chips are back",
+          "is_premium": false
+        },
+        {
+          "type": "__text_paragraph__",
+          "text": "After months of shortages, chip inventories are finally stabilizing."
+        },
+        {
+          "type": "__text_paragraph__",
+          "text": "Manufacturers report improved yields and faster deliveries."
+        }
+      ],
+      "contentPreview": [
+        {
+          "type": "__article_introduction__",
+          "category": "technology",
+          "author": "Jane Doe",
+          "published_at": "2024-06-01T10:00:00Z",
+          "image_url": "https://example.com/img/ai.jpg",
+          "title": "AI chips are back",
+          "is_premium": false
+        },
+        {
+          "type": "__text_paragraph__",
+          "text": "After months of shortages, chip inventories are finally stabilizing."
+        }
+      ]
+    },
+    "art_tech_002": {
+      "title": "Warehouse robots get smarter",
+      "url": "https://example.com/articles/robots",
+      "isPremium": true,
+      "totalCount": 2,
+      "content": [
+        {
+          "type": "__article_introduction__",
+          "category": "technology",
+          "author": "Sam Lee",
+          "published_at": "2024-06-02T09:30:00Z",
+          "image_url": "https://example.com/img/robot.jpg",
+          "title": "Warehouse robots get smarter",
+          "is_premium": true
+        },
+        {
+          "type": "__text_paragraph__",
+          "text": "Vision systems now recognize gestures and dynamic obstacles."
+        }
+      ],
+      "contentPreview": [
+        {
+          "type": "__article_introduction__",
+          "category": "technology",
+          "author": "Sam Lee",
+          "published_at": "2024-06-02T09:30:00Z",
+          "image_url": "https://example.com/img/robot.jpg",
+          "title": "Warehouse robots get smarter",
+          "is_premium": true
+        }
+      ]
+    }
+  },
+  "related_articles": {
+    "art_tech_001": {
+      "totalCount": 1,
+      "blocks": [
+        {
+          "type": "__post_small__",
+          "id": "art_tech_002",
+          "category": "technology",
+          "author": "Sam Lee",
+          "published_at": "2024-06-02T09:30:00Z",
+          "image_url": "https://example.com/img/robot.jpg",
+          "title": "Warehouse robots get smarter",
+          "description": "New vision systems improve safety.",
+          "is_premium": true,
+          "action": {
+            "type": "__navigate_to_article__",
+            "article_id": "art_tech_002"
+          }
+        }
+      ]
+    }
+  },
+  "popular_search": {
+    "current": {
+      "topics": ["AI", "Chips", "Robotics"],
+      "articles": [
+        {
+          "type": "__post_small__",
+          "id": "art_tech_001",
+          "category": "technology",
+          "author": "Jane Doe",
+          "published_at": "2024-06-01T10:00:00Z",
+          "image_url": "https://example.com/img/ai.jpg",
+          "title": "AI chips are back",
+          "description": "Chip supply rebounds as demand surges.",
+          "is_premium": false,
+          "action": {
+            "type": "__navigate_to_article__",
+            "article_id": "art_tech_001"
+          }
+        }
+      ]
+    }
+  },
+  "relevant_search": {
+    "china": {
+      "term": "china",
+      "topics": ["Supply chain", "Manufacturing"],
+      "articles": [
+        {
+          "type": "__post_small__",
+          "id": "art_tech_001",
+          "category": "technology",
+          "author": "Jane Doe",
+          "published_at": "2024-06-01T10:00:00Z",
+          "image_url": "https://example.com/img/ai.jpg",
+          "title": "AI chips are back",
+          "description": "Chip supply rebounds as demand surges.",
+          "is_premium": false,
+          "action": {
+            "type": "__navigate_to_article__",
+            "article_id": "art_tech_001"
+          }
+        }
+      ]
+    }
+  },
+  "subscriptions": {
+    "dd339fda-33e9-49d0-9eb5-0ccb77eb760f": {
+      "id": "dd339fda-33e9-49d0-9eb5-0ccb77eb760f",
+      "name": "premium",
+      "cost": { "monthly": 1499, "annual": 16200 },
+      "benefits": [
+        "Ad-free reading",
+        "Full article access",
+        "Premium newsletters"
+      ]
+    },
+    "34809bc1-28e5-4967-b029-2432638b0dc7": {
+      "id": "34809bc1-28e5-4967-b029-2432638b0dc7",
+      "name": "basic",
+      "cost": { "monthly": 499, "annual": 5400 },
+      "benefits": ["Limited premium articles"]
+    }
+  },
+  "users": {
+    "user_123": {
+      "id": "user_123",
+      "subscription": "basic"
+    }
+  }
+}

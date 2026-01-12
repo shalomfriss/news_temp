@@ -1,0 +1,53 @@
+scalar JSON
+
+type Category @table(name: "categories") {
+  name: String! @primaryKey
+}
+
+type Feed @table(name: "feeds") {
+  category: String! @primaryKey
+  blocks_json: String!
+  total_count: Int!
+}
+
+type Article @table(name: "articles") {
+  id: String! @primaryKey
+  title: String!
+  url: String!
+  is_premium: Boolean!
+  total_count: Int!
+  content_json: String!
+  content_preview_json: String
+  post_json: String
+}
+
+type RelatedArticles @table(name: "related_articles") {
+  article_id: String! @primaryKey
+  blocks_json: String!
+  total_count: Int!
+}
+
+type PopularSearch @table(name: "popular_search") {
+  id: String! @primaryKey
+  topics_json: String!
+  articles_json: String!
+}
+
+type RelevantSearch @table(name: "relevant_search") {
+  term: String! @primaryKey
+  topics_json: String!
+  articles_json: String!
+}
+
+type Subscription @table(name: "subscriptions") {
+  id: String! @primaryKey
+  name: String!
+  monthly: Int!
+  annual: Int!
+  benefits_json: String!
+}
+
+type User @table(name: "users") {
+  id: String! @primaryKey
+  subscription: String!
+}

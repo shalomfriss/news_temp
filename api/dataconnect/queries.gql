@@ -1,0 +1,83 @@
+query GetCategories {
+  categories { name }
+}
+
+query GetFeed($category: String!) {
+  feeds_by_pk(category: $category) {
+    blocks_json
+    total_count
+  }
+}
+
+query GetArticle($id: String!) {
+  articles_by_pk(id: $id) {
+    id
+    title
+    url
+    is_premium
+    total_count
+    content_json
+    content_preview_json
+    post_json
+  }
+}
+
+query GetArticleMeta($id: String!) {
+  articles_by_pk(id: $id) {
+    is_premium
+  }
+}
+
+query GetRelatedArticles($id: String!) {
+  related_articles_by_pk(article_id: $id) {
+    blocks_json
+    total_count
+  }
+}
+
+query GetPopularSearch {
+  popular_search_by_pk(id: "current") {
+    topics_json
+    articles_json
+  }
+}
+
+query GetRelevantSearch($term: String!) {
+  relevant_search_by_pk(term: $term) {
+    topics_json
+    articles_json
+  }
+}
+
+query GetSubscriptions {
+  subscriptions {
+    id
+    name
+    monthly
+    annual
+    benefits_json
+  }
+}
+
+query GetSubscriptionPlan($id: String!) {
+  subscriptions_by_pk(id: $id) {
+    name
+  }
+}
+
+query GetUser($id: String!) {
+  users_by_pk(id: $id) {
+    id
+    subscription
+  }
+}
+
+mutation UpsertUserSubscription($id: String!, $subscription: String!) {
+  insert_users_one(
+    object: { id: $id, subscription: $subscription }
+    on_conflict: { constraint: users_pkey, update_columns: [subscription] }
+  ) {
+    id
+    subscription
+  }
+}
